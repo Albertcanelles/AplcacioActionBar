@@ -144,10 +144,29 @@ public class MainActivity extends FragmentActivity implements
 			// Return a DummySectionFragment (defined as a static inner class
 			// below) with the page number as its lone argument.
 			Fragment fragment = new DummySectionFragment();
+			Fragment fragment2 = new DummySectionFragment2();
+			Fragment fragment3 = new DummySectionFragment3();
+			Fragment fragment4 = new DummySectionFragment4();
 			Bundle args = new Bundle();
 			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+			args.putInt(DummySectionFragment2.ARG_SECTION_NUMBER, position + 2);
+			args.putInt(DummySectionFragment3.ARG_SECTION_NUMBER, position + 3);
+			args.putInt(DummySectionFragment4.ARG_SECTION_NUMBER, position + 4);
 			fragment.setArguments(args);
-			return fragment;
+			fragment2.setArguments(args);
+			fragment4.setArguments(args);
+			fragment4.setArguments(args);
+			switch (position) {
+			case 0:
+				return fragment;
+			case 1:
+				return fragment2;
+			case 2:
+				return fragment3;
+			case 3:
+				return fragment4;
+			}
+			return null;
 		}
 
 		@Override
@@ -186,17 +205,69 @@ public class MainActivity extends FragmentActivity implements
 
 		public DummySectionFragment() {
 		}
-
+			
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
 					container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			dummyTextView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
+			
 			return rootView;
 		}
 	}
+	 public static class DummySectionFragment2 extends Fragment {
+	        /**
+	         * The fragment argument representing the section number for this
+	         * fragment.
+	         */
+	        public static final String ARG_SECTION_NUMBER = "section_number";
+
+	        public DummySectionFragment2() {
+	        }
+
+	        @Override
+	        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	                                 Bundle savedInstanceState) {
+	            View rootView2 = inflater.inflate(R.layout.fragmented_main_dummy2, container, false);
+
+	            return rootView2;
+	        }
+	    }
+	 public static class DummySectionFragment3 extends Fragment {
+	        /**
+	         * The fragment argument representing the section number for this
+	         * fragment.
+	         */
+	        public static final String ARG_SECTION_NUMBER = "section_number_3";
+
+	        public DummySectionFragment3() {
+	        }
+
+	        @Override
+	        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	                                 Bundle savedInstanceState) {
+	            View rootView3 = inflater.inflate(R.layout.fragmented_main_dummy3, container, false);
+
+	            return rootView3;
+	        }
+	    }
+	 
+	 public static class DummySectionFragment4 extends Fragment {
+	        /**
+	         * The fragment argument representing the section number for this
+	         * fragment.
+	         */
+	        public static final String ARG_SECTION_NUMBER = "section_number_4";
+
+	        public DummySectionFragment4() {
+	        }
+
+	        @Override
+	        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	                                 Bundle savedInstanceState) {
+	            View rootView4 = inflater.inflate(R.layout.fragmented_main_dummy4, container, false);
+
+	            return rootView4;
+	        }
+	    }
 }
