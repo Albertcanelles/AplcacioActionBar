@@ -2,8 +2,12 @@ package com.iesebre.DAM2.aplicaciocasa;
 
 import java.util.Locale;
 
+
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -16,9 +20,13 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -66,6 +74,8 @@ public class MainActivity extends FragmentActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+	
 
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
@@ -101,6 +111,21 @@ public class MainActivity extends FragmentActivity implements
 					.setText(mSectionsPagerAdapter.getPageTitle(i))
 					.setTabListener(this));
 		}
+		
+		Intent i = getIntent();
+        int obrir = i.getIntExtra(Principal.identificadorIntent, -1);
+        switch(obrir){
+        case 1:
+                mViewPager.setCurrentItem(0);
+                break;
+        case 2:
+                mViewPager.setCurrentItem(1);
+                break;
+        case 3:
+                mViewPager.setCurrentItem(2);
+                break;
+
+        }
 	}
 
 	@Override
@@ -157,9 +182,11 @@ public class MainActivity extends FragmentActivity implements
 			fragment4.setArguments(args);
 			fragment4.setArguments(args);
 			switch (position) {
-			case 0:
+			case 0:	
+				
 				return fragment;
 			case 1:
+			
 				return fragment2;
 			case 2:
 				return fragment3;
@@ -270,4 +297,5 @@ public class MainActivity extends FragmentActivity implements
 	            return rootView4;
 	        }
 	    }
+	 
 }

@@ -3,10 +3,10 @@
 
     <string name="app_name">AplicacioCasa</string>
     <string name="action_settings">Settings</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="title_section4">Section 4</string>
+    <string name="title_section1">Inserta</string>
+    <string name="title_section2">Elimina</string>
+    <string name="title_section3">Actualitza</string>
+    <string name="title_section4">Llistar</string>
 	<string name="menu_guardar">Guardar</string>
 	<string name="menu_nuevo">Nou</string>
     

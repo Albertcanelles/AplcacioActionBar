@@ -1,0 +1,36 @@
+<com.iesebre.DAM2.aplicaciocasa.DashboardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#f8f9fe" >
+	<!--  Insertar -->
+    <Button
+        android:id="@+id/btn_insertar"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/ic_insertar"
+        android:text="Insertar" />
+    
+	<!--  Eliminar -->
+    <Button
+        android:id="@+id/btn_eliminar"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/ic_eliminar"
+        android:text="Eliminar" />
+    
+	<!--  Actualitzar -->
+    <Button
+        android:id="@+id/btn_actualitzar"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/ic_actualizar"
+        android:text="Actualitzar" />
+	
+    <!--  Sortir -->
+    <Button
+        android:id="@+id/btn_sortir"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/ic_sortir"
+        android:text="Sortir" />
+
+    
+</com.iesebre.DAM2.aplicaciocasa.DashboardLayout>

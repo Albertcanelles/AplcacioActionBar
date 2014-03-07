@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.iesebre.DAM2.aplicaciocasa.MainActivity"
+            android:name="com.iesebre.DAM2.aplicaciocasa.Principal"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.iesebre.DAM2.aplicaciocasa.MainActivity"></activity>
+    
+        <activity android:name="com.iesebre.DAM2.aplicaciocasa.fragmented_main_dummy"></activity>
+        <activity android:name="com.iesebre.DAM2.aplicaciocasa.fragmented_main_dummy2"></activity>
+        <activity android:name="com.iesebre.DAM2.aplicaciocasa.fragmented_main_dummy3"></activity>
+        <activity android:name="com.iesebre.DAM2.aplicaciocasa.fragmented_main_dummy4"></activity>
     </application>
 
 </manifest>
